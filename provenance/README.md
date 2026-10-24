@@ -1,0 +1,9 @@
+# Extraction provenance
+
+This independent repository imports the adult simulation module from `CPTM511/vessel-lab` commit `1213844e51354416b0f0a1b45d3d91c4dff67127`, together with its required `host-state.mjs` and MIT license. `import-manifest.json` records SHA-256 for every imported file. The separately identified interrupted round-six record was captured after that commit. It has no complete-procedure success claim.
+
+Historical evidence and archived round-six source retain their original bytes and internal paths, preserving the frozen runtime digest `c0e923ee30e69b394f475258877a47e4c7c96f745413ff17aa667f8a16bab32f`. Archived runtime source, failed experiments and original model images are included. Earlier historical documentation references the original repository's commits; those are historical provenance, not runtime dependencies. The source's Git history has not been rewritten or presented as the new project's history.
+
+The root README is the current standalone status. Imported module documents are retained historical material. There are no vessel simulation files or dependencies on a sibling checkout. New root launchers dispatch to the adult module. Two current Godot title strings change the product branding; mechanics, evaluator and controller instructions are unchanged. Verifiers route historical round-six records to the archived runtime. `standalone-changes.json` explicitly lists these differences. The historical freeze remains preserved and intentionally does not authorize the renamed current runtime.
+
+The two earliest rejected anatomy snapshots (`anatomy-before-joint` and `anatomy-rejected-meatus-source`) are partial historical source excerpts, not runnable archived releases. Their missing modules are not dependencies of the current application. Round1–6 archived evaluation runtimes contain their complete manifest-listed source.

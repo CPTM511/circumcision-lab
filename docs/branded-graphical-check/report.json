@@ -1,0 +1,96 @@
+{
+  "kind": "Standalone extraction local workflow check; manual command and recorded playback, no model inference",
+  "originCommit": "1213844e51354416b0f0a1b45d3d91c4dff67127",
+  "source": {
+    "algorithm": "sha256",
+    "files": {
+      "recording.mjs": "8e02bebf01068c8994da493182f1dc173c162a5138dbf4466e4b3abc574534a9",
+      "replay.mjs": "5add86f2ea484a75d4846844c01ba2a065482a59d745a67207ca0e8cea4120a5",
+      "agent.mjs": "96eb63cfacc49961feec65da1e011951552b737f2c7fb41e668e1061da3fd46a",
+      "evaluation-freeze.mjs": "df102509a9098814ef8a966f17ba57756f07b9eacfe65ec6f9b752a8821739c2",
+      "../../host-state.mjs": "4ddab9853b4d11ccbfc351977b2035b038ac2d9822b9162b1402a339e30f15c1",
+      "controller-lease.mjs": "71e9fbbfabcd255432a297efdfb741815ecb799f587edbd9fec2368ebe5f1d74",
+      "controller-spec.mjs": "2ff287823adc532198a9541cc9a25b8d12a068aeeb8ebf6972add209d7a320b0",
+      "ordinary-guard.mjs": "f22620517aa2bdf5261a8a7f6567aa51a06bae7987f5619dc8bdd859016426d7",
+      "instrumentation.mjs": "5fc9cfa0f65f77c2e791a0708b16f6d831bfd6c43b5540cc7eb85958ca768bb2",
+      "manifest.mjs": "1c3cec744379bb472c2816fc0bb4903a27365f43a0d7f7dc2b7992559a8a8fb0",
+      "inspector.mjs": "fe7b5fdd2f04695a3f1a076a8fb3902aaecbd93b79a835f60a5381a00e46131b",
+      "launch.mjs": "2f12c6b65f3ac32dc9b902e9f98faae3fb8d97194d5a5d33fdcb142951197d3c",
+      "mechanics.mjs": "ab3d5d292f502e45cb58ce6c3aa8dca48fcd73c348fa4e0c7809609b66545bd6",
+      "scenario.mjs": "a2ffec3c3dfad0751078cf07201ad22243a0022eb2f883fd32ecbe146ff115a3",
+      "contact.mjs": "85c27ab28eee4865b361080115693c41a366e19e40d80501239e1e9ef711eeb8",
+      "cutting.mjs": "c303c0c9e7e3631c30d15a877b341689d64ff0c701b5f735658d2c4286ae2aff",
+      "task-definition.mjs": "97a3d7dbafdfe168260c8748042aee5cd1644f22ccd4a1f61e87114b19f0f78b",
+      "evaluation.mjs": "d1d193bdd76a46f8481e902b0be236e136f06d6ddaa7f7ee8264b5ed4bc8f1db",
+      "attachments.mjs": "65e8124a39637ba16c9f0e8012412ea36c80ced2667c5698f3c95e811b19337b",
+      "godot/main.gd": "b011cae3cfe49eb68db4d14069dd5994d09c37ab7ae93500997fec382946450c",
+      "godot/anatomy.gd": "a2baf2fa8d2160de0b52049e117402197249bd98b535dac1ed70f3f7bc7f1ebf",
+      "godot/main.tscn": "533a408864e137b203793a2526a981756735857d4d5284ac1563719105592b9a",
+      "godot/project.godot": "195665900401b177a2fd81be791740e4310b868e6a25a2aee1fe6d69ce6ff85f",
+      "godot/data/tissue-rest.json": "64162d9945a4893347e46b581dff327260981ee8b4688f877501f172e721c893",
+      "docs/PROTOCOL.md": "2f3206e06cf632508033d7b57736616805400241bb6e31cb160d0c9f73ab4827"
+    },
+    "digest": "2ed44bf0f82aeffa32fd9a23914bc1998df62e2f15a2c972948deb419be46598"
+  },
+  "checks": [
+    {
+      "label": "initial",
+      "worldRevision": 0,
+      "source": "manual-inspection",
+      "imageHash": "18a2ba5c25a2e3fa9fe37411c22a1de177f17dbd45a372c7028f7d85e8264963",
+      "renderer": "forward_plus",
+      "latencyMs": 340
+    },
+    {
+      "label": "manual-reset",
+      "worldRevision": 1,
+      "mechanicalRevision": 0,
+      "seed": 29,
+      "source": "manual-mechanics",
+      "imageHash": "add2ab385009388b5324ef227a18b88cf7adbac59a61a20b1260d982b1ca7116",
+      "renderer": "forward_plus",
+      "latencyMs": 1216
+    },
+    {
+      "label": "manual-step",
+      "worldRevision": 2,
+      "mechanicalRevision": 1,
+      "seed": 29,
+      "source": "manual-mechanics",
+      "imageHash": "59aa91af15f0d5ba75dcb708df7ec8c0d66cc84abd66ccd7535541ca4b961b19",
+      "renderer": "forward_plus",
+      "latencyMs": 865
+    },
+    {
+      "label": "stopped-playback",
+      "worldRevision": 3,
+      "mechanicalRevision": 0,
+      "seed": 11,
+      "source": "recorded-playback",
+      "imageHash": "704e4c3256e180bacd3f9875dd0d18f0626b65e0b09c032060e7c3f675312f31",
+      "renderer": "forward_plus",
+      "latencyMs": 756
+    },
+    {
+      "label": "completed-playback",
+      "worldRevision": 6,
+      "mechanicalRevision": 2,
+      "seed": 11,
+      "source": "recorded-playback",
+      "imageHash": "834d998e64b38030f30ce3b4952f3c9c18dfa894ab6a146bdd4f0da491fcc384",
+      "renderer": "forward_plus",
+      "latencyMs": 1685
+    },
+    {
+      "label": "reset-expanded",
+      "worldRevision": 7,
+      "mechanicalRevision": 0,
+      "seed": 83,
+      "source": "manual-mechanics",
+      "imageHash": "0e1a44dd2c0e9a49db8fd09afbdfb565f2cb89e4086a5428be8d65a428a57eac",
+      "renderer": "forward_plus",
+      "latencyMs": 703
+    }
+  ],
+  "passed": true
+}

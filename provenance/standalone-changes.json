@@ -1,0 +1,9 @@
+{
+  "reason": "Product title only in runtime; verifier routing to preserved original sources. No mechanics, evaluator or controller changes.",
+  "files": {
+    "procedures/circumcision/godot/main.gd": "b011cae3cfe49eb68db4d14069dd5994d09c37ab7ae93500997fec382946450c",
+    "procedures/circumcision/godot/project.godot": "195665900401b177a2fd81be791740e4310b868e6a25a2aee1fe6d69ce6ff85f",
+    "procedures/circumcision/verify-controller.mjs": "b557bd80c4d93e47c9260d7841f48a7cb0ac039017565c62093a2e9ae0c40837",
+    "procedures/circumcision/verify-contact-projection.mjs": "7de99626863a4ffad6a3f5e391fb1ed0fb904f21d181a2c58dee440cd4b95946"
+  }
+}

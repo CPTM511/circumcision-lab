@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "kind": "Recorded playback with actual Godot feedback; no new model inference",
+  "sourceDigest": "2ed44bf0f82aeffa32fd9a23914bc1998df62e2f15a2c972948deb419be46598",
+  "originalSourceDigest": "c0e923ee30e69b394f475258877a47e4c7c96f745413ff17aa667f8a16bab32f",
+  "steps": 2,
+  "actualImages": 2,
+  "distinctImages": 2,
+  "maximumCommandToFrameMs": 794,
+  "renderers": [
+    "forward_plus"
+  ],
+  "confirmedLockedPairs": 0,
+  "assessmentPassed": false,
+  "scope": "Mechanical replay and recorded-image integrity, not reconstruction of image pixels or a new autonomous episode"
+}
