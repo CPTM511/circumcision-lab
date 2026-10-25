@@ -1,0 +1,14 @@
+{
+  "verified": true,
+  "kind": "Preserved externally interrupted record; not a completed success or independent failure",
+  "moves": 16,
+  "images": 28,
+  "revision": 16,
+  "failedGates": [
+    "targetDetached",
+    "retainedEdgeApproximation",
+    "releasedHold"
+  ],
+  "protectedIntersections": 0,
+  "sourceDigest": "c0e923ee30e69b394f475258877a47e4c7c96f745413ff17aa667f8a16bab32f"
+}

@@ -13,5 +13,6 @@ for(const [file,hash] of Object.entries(manifest.files)){
 const {sourceManifest:archived}=await import('./procedures/circumcision/evidence/runtime-c0-round6/procedures/circumcision/manifest.mjs');
 assert.equal(archived().digest,'c0e923ee30e69b394f475258877a47e4c7c96f745413ff17aa667f8a16bab32f');
 assert.deepEqual(Object.keys(archived().files).filter(f=>archived().files[f]!==sourceManifest().files[f]),['godot/main.gd','godot/project.godot']);
-assert.throws(()=>checkEvaluationFreeze(),/does not match/);
-console.log(JSON.stringify({verified:true,importedFiles:Object.keys(manifest.files).length,sourceDigest:sourceManifest().digest,historicalRound:6,evaluationEnabled:false,scope:'Preserved evidence and mechanics; two explicit product-title changes; no inference or new procedure acceptance'},null,2));
+const freeze=checkEvaluationFreeze();assert.equal(freeze.round,7);
+assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root,'procedures/circumcision/evidence/evaluation-rounds/round6-freeze.json'))).digest('hex'),manifest.files['procedures/circumcision/evaluation-freeze.json']);
+console.log(JSON.stringify({verified:true,importedFiles:Object.keys(manifest.files).length,sourceDigest:sourceManifest().digest,historicalRound:6,evaluationEnabled:true,scope:'Preserved evidence and mechanics; two explicit product-title changes; matching round7 freeze; no new procedure acceptance'},null,2));
