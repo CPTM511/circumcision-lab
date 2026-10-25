@@ -20,7 +20,7 @@ The launcher opens the inspector without starting model inference. The standalon
 
 Actual model control is a separate, explicitly initiated workflow requiring the compatible authenticated Codex app-server described in [controller setup](procedures/circumcision/docs/CONTROLLER.md). Historical records identify `gpt-6-astra` and `xhigh`; availability depends on the local host. Missing access or an unavailable model fails closed. This preview ships no scheduled jobs and does not automatically start evaluations.
 
-Current main: [round7 evaluation](docs/ROUND7_EVALUATION.md) has one verified independent success; two declared cases remain. The published preview and historical counts below retain their original scope.
+Current main: [round7 evaluation](docs/ROUND7_EVALUATION.md) has two verified independent successes; one declared case remains. The published preview and historical counts below retain their original scope.
 
 ## Evidence and current status
 
