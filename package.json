@@ -1,6 +1,6 @@
 {
   "name": "circumcision-lab",
-  "version": "0.1.0-preview.1",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "description": "Godot adult circumcision research simulation and auditable model-control benchmark",

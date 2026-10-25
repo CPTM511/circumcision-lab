@@ -1,4 +1,6 @@
-# Standalone preview validation
+# Standalone preview validation (historical)
+
+This record describes v0.1.0-preview.1. For the completed round7 evaluation and v0.1.0 release, see [release acceptance](RELEASE_ACCEPTANCE.md). The graphical checks below apply to the same runtime digest.
 
 The package is independent of the former Vessel Lab checkout. Its10,280 imported files have SHA-256 checks, with four explicitly recorded standalone edits: two product-title strings and two offline verifier routing updates. All imported evidence images, journals, anatomy, mechanics, evaluator and controller instructions are unchanged. Complete manifest-listed round1–6 evaluation sources are bundled. Early rejected anatomy source excerpts remain partial historical snapshots, explicitly documented in provenance.
 

@@ -2,7 +2,7 @@
 
 A standalone Godot research simulation for adult circumcision tissue manipulation and auditable low-level model control. It includes original layered anatomy, bilateral instruments, constrained tissue deformation, swept cutting, component tracking, synthetic edge attachments, a frozen evaluator, actual rendered observations, and preserved successful and unsuccessful experiments.
 
-**Research preview — `v0.1.0-preview.1`.** Two complete independent episodes passed the synthetic C0 gates under the round-five runtime; the third failed detached-component collection. A targeted contact projection correction has since been verified and frozen. Independent evaluation of that correction is incomplete: round-six seed11 was interrupted after16 actions and28 observations; seeds29/83 have not run. This release establishes a standalone runnable package, not completion of the three-case acceptance set or clinical validity.
+**Research release — `v0.1.0`.** All three declared independent cases (seeds 11, 29 and 83) passed the unchanged synthetic C0 gates under one published round-seven configuration. GPT-6 Astra selected each low-level action in a fresh context, using actual Godot observations. Private originals and public exports reproduce exactly in offline verification. This completes the bounded engineering benchmark; it does not establish clinical validity or generalization.
 
 ## Run locally
 
@@ -16,25 +16,23 @@ node launch.mjs
 
 On macOS, double-click **Start.command**. Set `GODOT_BIN` to the Godot executable if it is not detected. `node launch.mjs --compatibility` selects the Compatibility renderer; Forward+ is the default. The local service uses `127.0.0.1:8785`; set `ANATOMY_PORT` to change it.
 
-The launcher opens the inspector without starting model inference. The standalone UI is branded Circumcision Lab. The released preview preserves the historical freeze and disables complete-procedure evaluation. Current main now includes an explicit [round7 preflight](procedures/circumcision/evidence/evaluation-rounds/round7-preflight.json) and matching freeze for independent evaluation of the standalone runtime. This enables **Start C0 procedure** only when explicitly selected; it is not an acceptance result. Orbit and zoom the scene, inspect anatomical layers, choose a specimen seed, then select **Reset mechanics sandbox** to use bilateral movement, orientation, grasp, cutting and attachment controls. **Replay recorded example** replays a short two-move connectivity record using new Godot frames, without model inference. **Stop execution** revokes the active lease.
+The launcher opens the inspector without starting model inference. Orbit and zoom the scene, inspect anatomical layers, choose a specimen seed, then select **Reset mechanics sandbox** for bilateral movement, orientation, grasp, cutting and attachment controls. **Replay recorded example** replays a short two-move connectivity record using new Godot frames, without model inference. **Stop execution** revokes the active lease. **Start C0 procedure** explicitly initiates a fresh model-controlled episode and requires the matching frozen configuration.
 
-Actual model control is a separate, explicitly initiated workflow requiring the compatible authenticated Codex app-server described in [controller setup](procedures/circumcision/docs/CONTROLLER.md). Historical records identify `gpt-6-astra` and `xhigh`; availability depends on the local host. Missing access or an unavailable model fails closed. This preview ships no scheduled jobs and does not automatically start evaluations.
-
-Current main: [round7 evaluation](docs/ROUND7_EVALUATION.md) has two verified independent successes; one declared case remains. The published preview and historical counts below retain their original scope.
+Actual model control is a separate, explicitly initiated workflow requiring the compatible authenticated Codex app-server described in [controller setup](procedures/circumcision/docs/CONTROLLER.md). Historical records identify `gpt-6-astra` and `xhigh`; availability depends on the local host. Missing access or an unavailable model fails closed. This release ships no scheduled jobs and does not automatically start evaluations.
 
 ## Evidence and current status
 
-| Evidence | Result | Interpretation |
-| --- | --- | --- |
-| Round5 seed11 | 165 actions,221 actual images; C0 and Finish passed | Historical independent success |
-| Round5 seed29 | 96 actions,132 actual images; C0 and Finish passed | Historical independent success |
-| Round5 seed83 | 160 actions,210 actual images; collection failed | Preserved independent failure |
-| Contact correction | Exact-state counterfactuals;228 actual scripted collection frames; all synthetic gates passed | Engineering validation, not a new model success |
-| Round6 seed11 |16 actions,28 actual images; externally interrupted | Incomplete, neither success nor completed failure |
+| Round7 seed | Accepted actions | Actual observations | Maximum feedback latency | Result |
+| --- | ---: | ---: | ---: | --- |
+|11|136|202|2,833ms|All C0 gates and Finish passed|
+|29|163|244|2,984ms|All C0 gates and Finish passed|
+|83|128|224|3,234ms|All C0 gates and Finish passed|
 
-The full denominator before round6 is **eight ended attempts: two successful and six unsuccessful**, including infrastructure and frame-deadline failures. The interrupted ninth attempt is preserved separately. See [evaluation history](procedures/circumcision/evidence/EVALUATION.md), [correction methods](procedures/circumcision/evidence/evaluation-rounds/round6-validation/METHOD.md), [freeze](procedures/circumcision/evaluation-freeze.json), and [interrupted record](procedures/circumcision/evidence/c0-round6-seed11-owner-paused/agent.jsonl).
+The declared set passed **3/3**, with 670 actual observations and no operator intervention or runtime changes during the set. Seed29 removed 0.277822% non-target area, within the unchanged 1% limit; it is not a zero-off-target result. See [round7 results](docs/ROUND7_EVALUATION.md) and [acceptance evidence](docs/RELEASE_ACCEPTANCE.md).
 
-[Open the latest complete successful episode](replays/latest-complete-model-episode.html) as a downloaded HTML file in a browser. It preserves all132 original Godot observation frames. It is an accelerated frame-sequence replay, not continuous screen video or a new simulation run. A [separate interrupted replay](replays/latest-paused-model-episode.html) preserves round-six observations.
+The full history remains visible: **11 ended attempts, five successful and six unsuccessful**, plus one externally interrupted episode. Earlier successes are separate from this round's three-case acceptance. [Historical evaluation](procedures/circumcision/evidence/EVALUATION.md), failed trajectories, original observations, [contact-correction validation](procedures/circumcision/evidence/evaluation-rounds/round6-validation/METHOD.md) and the interrupted round-six record are retained. Scripted engineering tests are not counted as model successes.
+
+[Open the latest complete successful episode](replays/latest-complete-model-episode.html) as a downloaded HTML file in a browser. It contains all **224** original observations from round7 seed83. This is an accelerated frame-sequence replay, not continuous screen video or a new simulation run. The [previous complete replay](replays/round5-seed29-complete.html) and [interrupted replay](replays/latest-paused-model-episode.html) remain available.
 
 ## Architecture and reproducibility
 
@@ -44,7 +42,7 @@ The complete implementation lives in `procedures/circumcision/`; this internal l
 node verify-import.mjs
 cd procedures/circumcision
 node --test tests/*.test.mjs
-node verify-controller.mjs evidence/c0-round5-seed29-attempt01
+node verify-controller.mjs evidence/c0-round7-seed83-attempt01
 node verify-controller.mjs evidence/c0-round5-seed83-attempt01 --incomplete
 node verify-contact-projection.mjs
 ```
