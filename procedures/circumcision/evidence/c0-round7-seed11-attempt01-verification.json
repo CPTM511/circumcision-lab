@@ -1,0 +1,17 @@
+{
+  "verified": true,
+  "kind": "Actual model C0 episode",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "xhigh",
+  "seed": 11,
+  "sourceDigest": "2ed44bf0f82aeffa32fd9a23914bc1998df62e2f15a2c972948deb419be46598",
+  "privateAccessChecksVerified": false,
+  "moves": 136,
+  "toolCalls": 202,
+  "images": 202,
+  "rejected": 0,
+  "maxCommandToFrameMs": 2833,
+  "finalRevision": 137,
+  "assessmentPassed": true,
+  "scope": "Exact numerical replay and recorded JPEG integrity/association; not independent image reconstruction or clinical validation"
+}
